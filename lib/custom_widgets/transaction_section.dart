@@ -31,7 +31,7 @@ class TransactionsSection extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(16.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -102,11 +102,28 @@ class TransactionsSection extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                leading: Image(
-                  image: AssetImage(brandImage),
-                  width: 32,
-                  height: 32,
-                  fit: BoxFit.fill,
+                leading: Container(
+                  width: 30.97,
+                  height: 30.97,
+                  decoration: ShapeDecoration(
+                    color: Colors.grey,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(1),
+                    ),
+                    shadows: const [
+                      BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 2,
+                        offset: Offset(0, 0),
+                      ),
+                    ],
+                  ),
+                  child: Image(
+                    image: AssetImage(brandImage),
+                    width: 32,
+                    height: 32,
+                    fit: BoxFit.fill,
+                  ),
                 ),
                 subtitle: Expanded(
                   child: Row(

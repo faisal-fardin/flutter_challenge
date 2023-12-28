@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 
 class SuggestedSection extends StatelessWidget {
   const SuggestedSection({
-    super.key,
+    super.key, required this.title,
   });
+
+  final String title;
+
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +17,7 @@ class SuggestedSection extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: SizedBox(
-            width: 220,
+            width: 235,
             height: 40,
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -23,9 +26,9 @@ class SuggestedSection extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: const Text(
-                    'Suggested for you',
-                    style: TextStyle(
+                  child: Text(
+                    title,
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
@@ -70,6 +73,7 @@ class SuggestedSection extends StatelessWidget {
                     ),
                   ),
                 ),
+
               ],
             ),
           ),

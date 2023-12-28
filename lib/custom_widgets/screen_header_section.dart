@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 class ScreenHeaderSection extends StatelessWidget {
   const ScreenHeaderSection({
-    super.key,
+    super.key, required this.headerImage,
   });
+
+ final String headerImage;
 
   @override
   Widget build(BuildContext context) {
@@ -126,9 +128,9 @@ class ScreenHeaderSection extends StatelessWidget {
               Container(
                 width: 390.32,
                 height: 228.55,
-                decoration: const BoxDecoration(
+                decoration:  BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('images/Theme.png'),
+                    image: AssetImage(headerImage),
                     fit: BoxFit.cover,
                   ),
                 ),

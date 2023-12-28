@@ -1,4 +1,6 @@
 import 'package:design_challenge/pages/home_screen.dart';
+import 'package:design_challenge/pages/secondary_screen.dart';
+import 'package:design_challenge/pages/transactions_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBaseScreen extends StatefulWidget {
@@ -14,6 +16,8 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
 
   final List<Widget> _screen =[
     const HomeScreen(),
+    const SecondaryScreen(),
+    const TransactionsScreen(),
 
   ];
 
@@ -23,6 +27,7 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
     return Scaffold(
       body: _screen[_selectedScreenIndex],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedScreenIndex,
         unselectedItemColor: Colors.grey,
         iconSize: 30,
         showUnselectedLabels: true,
@@ -30,8 +35,9 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
         selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
         unselectedLabelStyle: const TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 15),
         onTap: (int index){
-          _selectedScreenIndex = index;
 
+          _selectedScreenIndex = index;
+          if(mounted){setState(() {});}
         },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home,),label: 'Home'),

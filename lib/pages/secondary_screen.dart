@@ -1,17 +1,16 @@
 import 'package:design_challenge/custom_widgets/brand_listtile_tiem.dart';
-import 'package:design_challenge/custom_widgets/suggested_section.dart';
 import 'package:design_challenge/custom_widgets/transaction_section.dart';
 import 'package:flutter/material.dart';
 import '../custom_widgets/screen_header_section.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class SecondaryScreen extends StatefulWidget {
+  const SecondaryScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<SecondaryScreen> createState() => _SecondaryScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _SecondaryScreenState extends State<SecondaryScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -21,8 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const ScreenHeaderSection(headerImage: 'images/Theme.png',),
-              const SuggestedSection(title: 'Suggested for you',),
+              const ScreenHeaderSection(headerImage: 'images/ff.png',),
               const TransactionsSection(
                 transactionDate: 'October 8th, 2022',
                 brandName: 'LONGOS',
@@ -32,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 price: -80.85,
                 camera: 'images/ca.png',
                 color: 0xFFFF8800,
-                title: 'All Transactions',
+                title: 'Recent Transactions',
                 titleBnt: 'See All',
               ),
               Padding(
