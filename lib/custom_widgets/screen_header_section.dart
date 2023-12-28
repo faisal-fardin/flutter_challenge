@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 
 class ScreenHeaderSection extends StatelessWidget {
-
   const ScreenHeaderSection({
     super.key,
   });
@@ -11,7 +9,7 @@ class ScreenHeaderSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: 393,
-        height: 429,
+        height: 469,
         decoration: const ShapeDecoration(
           gradient: LinearGradient(
             begin: Alignment(0.42, -0.91),
@@ -34,7 +32,7 @@ class ScreenHeaderSection extends StatelessWidget {
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.only(top: 30.0),
+          padding: const EdgeInsets.only(top: 20.0),
           child: Column(
             children: [
               SizedBox(
@@ -42,7 +40,9 @@ class ScreenHeaderSection extends StatelessWidget {
                 height: 55,
                 child: TextFormField(
                   keyboardType: TextInputType.text,
-                  style: const TextStyle(fontSize: 18,),
+                  style: const TextStyle(
+                    fontSize: 18,
+                  ),
                   decoration: InputDecoration(
                       prefixIcon: const Padding(
                         padding: EdgeInsets.only(left: 15.0),
@@ -55,63 +55,93 @@ class ScreenHeaderSection extends StatelessWidget {
                       fillColor: Colors.white,
                       filled: true,
                       hintText: 'Search',
-                      hintStyle: const TextStyle(fontSize: 16, color: Color(0xFFC1BDB9)),
-                      border:  OutlineInputBorder(
+                      hintStyle: const TextStyle(
+                          fontSize: 16, color: Color(0xFFC1BDB9)),
+                      border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(50),
                       ),
-                      enabledBorder:  OutlineInputBorder(
+                      enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(50),
                       ),
-                      focusedBorder:  OutlineInputBorder(
+                      focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(50),
                         borderSide: BorderSide.none,
                       )),
                 ),
               ),
-              Row(
-                children: [
-                  Container(
-                    width: 370.32,
-                    height: 228.55,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('images/Theme.png'),
-                        fit: BoxFit.cover,
-
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 20,
-                    height: 190.55,
-                    clipBehavior: Clip.antiAlias,
-                    decoration: ShapeDecoration(
-                      color: Color(0x7F4263EB),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      shadows: const [
-                        BoxShadow(
-                          color: Color(0x14202028),
-                          blurRadius: 20,
-                          offset: Offset(0, 0),
-                          spreadRadius: 0,
-                        )
-                      ],
-                    ),
-                  ),
-                ],
+              const SizedBox(
+                height: 10,
               ),
-              const SizedBox(height: 30,),
+              SizedBox(
+                width: 320,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: 90,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          backgroundColor: const Color(0xFF4363EB),
+                        ),
+                        onPressed: () {},
+                        child: const Text(
+                          'Cards',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10,),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Overview',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    const Spacer(),
+                    SizedBox(
+                      width: 40,
+                      height: 40,
+                      child: IconButton(
+                        style: IconButton.styleFrom(
+                          backgroundColor: const Color(0xFF4363EB),
+                        ),
+                        onPressed: () {},
+                        icon: const Icon(Icons.add,color: Colors.white,),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: 390.32,
+                height: 228.55,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('images/Theme.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
               const AddAndSendButton()
             ],
           ),
-        )
-    );
+        ));
   }
 }
-
 
 class AddAndSendButton extends StatelessWidget {
   const AddAndSendButton({
@@ -144,12 +174,16 @@ class AddAndSendButton extends StatelessWidget {
                     height: 22,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('images/send.png',),
+                        image: AssetImage(
+                          'images/send.png',
+                        ),
                         fit: BoxFit.fill,
                       ),
                     ),
                   ),
-                  const SizedBox(width: 10,),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   const SizedBox(
                     child: Text(
                       'Send Money',
@@ -165,7 +199,9 @@ class AddAndSendButton extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(width: 30,),
+        const SizedBox(
+          width: 30,
+        ),
         Container(
           width: 156.50,
           height: 60,
@@ -185,12 +221,16 @@ class AddAndSendButton extends StatelessWidget {
                     height: 22,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('images/add.png',),
+                        image: AssetImage(
+                          'images/add.png',
+                        ),
                         fit: BoxFit.fill,
                       ),
                     ),
                   ),
-                  const SizedBox(width: 10,),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   const SizedBox(
                     child: Text(
                       'Add Money',
