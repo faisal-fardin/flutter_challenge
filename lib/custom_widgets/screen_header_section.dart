@@ -11,7 +11,7 @@ class ScreenHeaderSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: 393,
-        height: 469,
+        height: 429,
         decoration: const ShapeDecoration(
           gradient: LinearGradient(
             begin: Alignment(0.42, -0.91),
@@ -85,10 +85,9 @@ class ScreenHeaderSection extends StatelessWidget {
                   Container(
                     width: 20,
                     height: 190.55,
-                    padding: const EdgeInsets.only(
-                        top: 4, left: 12, right: 12),
+                    clipBehavior: Clip.antiAlias,
                     decoration: ShapeDecoration(
-                      color: Colors.white,
+                      color: Color(0x7F4263EB),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
