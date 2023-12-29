@@ -314,12 +314,12 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
                                 child: const Column(
                                   children: [
                                     SizedBox(
-                                      width: 313,
-                                      height: 17,
+                                      width: 300,
+                                      height: 13,
                                       child: Text('October 7th, 2022',
                                         style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 12,
+                                          fontSize: 10,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),

@@ -61,7 +61,7 @@ class BrandListTileItem extends StatelessWidget {
             transactionTime,
             style: const TextStyle(
               color: Color(0xFF8F90A6),
-              fontSize: 9,
+              fontSize: 8,
               fontWeight: FontWeight.w400,
             ),
           ),
@@ -93,7 +93,7 @@ class BrandListTileItem extends StatelessWidget {
                   status,
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 9,
+                    fontSize: 8,
                     fontWeight: FontWeight.w400,
                   ),
                 )
@@ -111,12 +111,12 @@ class BrandListTileItem extends StatelessWidget {
                     textAlign: TextAlign.right,
                     style: const TextStyle(
                       color: Colors.black,
-                      fontSize: 12,
+                      fontSize: 11,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   const SizedBox(
-                    width: 6,
+                    width: 4,
                   ),
                   Image(
                     image: AssetImage(camera),
