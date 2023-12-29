@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Container(
-                  width: MediaQuery.of(context).size.width,
+                  width: 370,
                   height: 350,
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   decoration: ShapeDecoration(
@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       SizedBox(
                         width: 313,
-                        height: 17,
+                        height: 15,
                         child: Text('October 7th, 2022',
                           style: TextStyle(
                             color: Colors.black,
@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 6,
                       ),
                       BrandListTileItem(
                         brandName: 'NIKE',
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: 0xFFFF8800,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 6,
                       ),
                       BrandListTileItem(
                         brandName: 'AIRBNB BOOKING',
@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: 0xFF0063F7,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 6,
                       ),
                       BrandListTileItem(
                         brandName: 'NIKE',
@@ -104,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: 0xFFFF8800,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 6,
                       ),
                       BrandListTileItem(
                         brandName:'UBER EATS',

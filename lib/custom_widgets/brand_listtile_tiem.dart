@@ -33,8 +33,8 @@ class BrandListTileItem extends StatelessWidget {
         ),
       ),
       leading: Container(
-        width: 30.97,
-        height: 30.97,
+        width: 30,
+        height: 30,
         decoration: ShapeDecoration(
           color: Colors.grey,
           shape: RoundedRectangleBorder(
@@ -61,12 +61,12 @@ class BrandListTileItem extends StatelessWidget {
             transactionTime,
             style: const TextStyle(
               color: Color(0xFF8F90A6),
-              fontSize: 10,
+              fontSize: 9,
               fontWeight: FontWeight.w400,
             ),
           ),
           const SizedBox(
-            width: 6,
+            width: 4,
           ),
           Container(
             width: 76,

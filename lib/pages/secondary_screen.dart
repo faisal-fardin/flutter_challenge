@@ -35,8 +35,8 @@ class _SecondaryScreenState extends State<SecondaryScreen> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 350,
+                  width: 370,
+                  height: 360,
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   decoration: ShapeDecoration(
                     color: Colors.white,
@@ -56,7 +56,7 @@ class _SecondaryScreenState extends State<SecondaryScreen> {
                     children: [
                       SizedBox(
                         width: 313,
-                        height: 17,
+                        height: 20,
                         child: Text('October 7th, 2022',
                           style: TextStyle(
                             color: Colors.black,
@@ -66,7 +66,7 @@ class _SecondaryScreenState extends State<SecondaryScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 6
                       ),
                       BrandListTileItem(
                         brandName: 'NIKE',
@@ -78,7 +78,7 @@ class _SecondaryScreenState extends State<SecondaryScreen> {
                         color: 0xFFFF8800,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 6,
                       ),
                       BrandListTileItem(
                         brandName: 'AIRBNB BOOKING',
@@ -90,7 +90,7 @@ class _SecondaryScreenState extends State<SecondaryScreen> {
                         color: 0xFF0063F7,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 6,
                       ),
                       BrandListTileItem(
                         brandName: 'NIKE',
@@ -102,7 +102,7 @@ class _SecondaryScreenState extends State<SecondaryScreen> {
                         color: 0xFFFF8800,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 6,
                       ),
                       BrandListTileItem(
                         brandName:'UBER EATS',
