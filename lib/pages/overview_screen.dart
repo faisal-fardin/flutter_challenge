@@ -14,7 +14,6 @@ class _OverviewScreenState extends State<OverviewScreen> {
   final String currencySymbol = '৳';
   DateTime selectedDate = DateTime.now();
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,7 +95,9 @@ class _OverviewScreenState extends State<OverviewScreen> {
                           SizedBox(
                             width: 90,
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
                               child: const Text(
                                 'Cards',
                                 style: TextStyle(
@@ -158,15 +159,18 @@ class _OverviewScreenState extends State<OverviewScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 15,),
+            const SizedBox(
+              height: 15,
+            ),
             Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 30,),
-
+                    const SizedBox(
+                      height: 30,
+                    ),
                     Transform(
                       transform: Matrix4.identity()
                         ..translate(0.0, 0.0)
@@ -189,9 +193,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
                             borderRadius: BorderRadius.circular(6)),
                       ),
                     ),
-
                     const SizedBox(width: 4),
-
                   ],
                 ),
                 Container(
@@ -230,9 +232,45 @@ class _OverviewScreenState extends State<OverviewScreen> {
                     children: [
                       Row(
                         children: [
-                          MenuItem(),
-                          SizedBox(width: 15,),
-                          MenuItem(),
+                          MenuItem(
+                            images: 'images/27.png',
+                            price: '\$1890.40',
+                            name: 'Restaurants',
+                            color: 0xFFEFFADD,
+                            textColor: 0xFF78C200,
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          MenuItem(
+                            images: 'images/23.png',
+                            price: '\$1890.40',
+                            name: 'Restaurants',
+                            color: 0xFFFFFBD2,
+                            textColor: 0xFFD4C100,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 15,),
+                      Row(
+                        children: [
+                          MenuItem(
+                            images: 'images/25.png',
+                            price: '\$8990.50',
+                            name: 'Travel',
+                            color: 0xFFFFF1E8,
+                            textColor: 0xFFFF6300,
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          MenuItem(
+                            images: 'images/24.png',
+                            price: '\$1890.12',
+                            name: 'Groceries',
+                            color: 0xFFE3F9FF,
+                            textColor: 0xFF00BBEF,
+                          ),
                         ],
                       ),
                     ],

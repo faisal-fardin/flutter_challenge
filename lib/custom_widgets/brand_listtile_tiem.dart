@@ -69,7 +69,7 @@ class BrandListTileItem extends StatelessWidget {
             width: 6,
           ),
           Container(
-            width: 75,
+            width: 76,
             height: 16,
             padding: const EdgeInsets.symmetric(
                 horizontal: 6, vertical: 2),

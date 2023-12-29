@@ -1,4 +1,6 @@
 import 'package:design_challenge/pages/home_screen.dart';
+import 'package:design_challenge/pages/inbox_screen.dart';
+import 'package:design_challenge/pages/profile_screen.dart';
 import 'package:design_challenge/pages/secondary_screen.dart';
 import 'package:design_challenge/pages/transactions_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +20,8 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
     const HomeScreen(),
     const SecondaryScreen(),
     const TransactionsScreen(),
+    const InboxScreen(),
+    const ProfileScreen(),
 
   ];
 

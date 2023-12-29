@@ -2,8 +2,13 @@
 import 'package:flutter/material.dart';
 
 class MenuItem extends StatelessWidget {
-  const MenuItem({super.key});
+  const MenuItem({super.key, required this.images, required this.price, required this.name, required this.color, required this.textColor});
 
+  final String images;
+  final String price;
+  final String name;
+  final int color;
+  final int textColor;
 
 
   @override
@@ -13,7 +18,7 @@ class MenuItem extends StatelessWidget {
       height: 90,
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
       decoration: ShapeDecoration(
-        color: const Color(0xFFEFFADD),
+        color:  Color(color),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
@@ -28,57 +33,43 @@ class MenuItem extends StatelessWidget {
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: 24,
-                height: 24,
-                clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(color: Colors.white.withOpacity(0)),
-                child: const Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      width: 24,
-                      height: 24,
-                      child: Text(
-                        '🍽️',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  ],
+          Container(
+            width: 30,
+            height: 30,
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(color: Colors.white.withOpacity(0)),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  child: Image(
+                    image: AssetImage(images),
+                    width: 30,
+                    height: 30,
+                    fit: BoxFit.fill,
+                  ),
                 ),
-              ),
-              const Text(
-                '\$1890.40',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const Text(
-                'Restaurants',
-                style: TextStyle(
-                  color: Color(0xFF78C200),
-                  fontSize: 12,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ],
+              ],
+            ),
+          ),
+           Text( price,
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+           Text(name,
+            style:  TextStyle(
+              color: Color(textColor),
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ],
       ),
