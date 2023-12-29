@@ -1,2 +1,2 @@
 
-const String symbol = 'U+0024';
+const String symbol = 'From';

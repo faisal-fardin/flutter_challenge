@@ -1,11 +1,13 @@
+import 'package:design_challenge/pages/overview_screen.dart';
 import 'package:flutter/material.dart';
 
 class ScreenHeaderSection extends StatelessWidget {
   const ScreenHeaderSection({
-    super.key, required this.headerImage,
+    super.key,
+    required this.headerImage,
   });
 
- final String headerImage;
+  final String headerImage;
 
   @override
   Widget build(BuildContext context) {
@@ -98,9 +100,17 @@ class ScreenHeaderSection extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 10,),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const OverviewScreen()),
+                        );
+                      },
                       child: const Text(
                         'Overview',
                         style: TextStyle(
@@ -119,7 +129,10 @@ class ScreenHeaderSection extends StatelessWidget {
                           backgroundColor: const Color(0xFF4363EB),
                         ),
                         onPressed: () {},
-                        icon: const Icon(Icons.add,color: Colors.white,),
+                        icon: const Icon(
+                          Icons.add,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ],
@@ -128,7 +141,7 @@ class ScreenHeaderSection extends StatelessWidget {
               Container(
                 width: 390.32,
                 height: 228.55,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(headerImage),
                     fit: BoxFit.cover,
