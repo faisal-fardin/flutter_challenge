@@ -21,6 +21,7 @@ class _SecondaryScreenState extends State<SecondaryScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const ScreenHeaderSection(headerImage: 'images/ff.png',),
+              const TitleBar(title: 'Recent Transactions', titleBnt: 'See All'),
               const TransactionsSection(
                 transactionDate: 'October 8th, 2022',
                 brandName: 'LONGOS',
@@ -30,8 +31,6 @@ class _SecondaryScreenState extends State<SecondaryScreen> {
                 price: -80.85,
                 camera: 'images/ca.png',
                 color: 0xFFFF8800,
-                title: 'Recent Transactions',
-                titleBnt: 'See All',
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),

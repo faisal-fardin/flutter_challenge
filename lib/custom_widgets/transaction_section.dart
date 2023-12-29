@@ -4,8 +4,6 @@ import 'package:intl/intl.dart';
 class TransactionsSection extends StatelessWidget {
   const TransactionsSection({
     super.key,
-    required this.title,
-    required this.titleBnt,
     required this.transactionDate,
     required this.brandName,
     required this.brandImage,
@@ -15,8 +13,6 @@ class TransactionsSection extends StatelessWidget {
     required this.camera, required this.color,
   });
 
-  final String title;
-  final String titleBnt;
   final String transactionDate;
   final String brandName;
   final String brandImage;
@@ -30,38 +26,6 @@ class TransactionsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-               Padding(
-                 padding: const EdgeInsets.all(8.0),
-                 child: Text(
-                  title,
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                  ),
-                               ),
-               ),
-              const Spacer(),
-              TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    titleBnt,
-                    textAlign: TextAlign.right,
-                    style: const TextStyle(
-                      color: Color(0xFF0063F7),
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ))
-            ],
-          ),
-        ),
         Container(
           width: 380,
           height: 120,
@@ -202,6 +166,51 @@ class TransactionsSection extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class TitleBar extends StatelessWidget {
+  const TitleBar({
+    super.key, required this.title, required this.titleBnt,
+  });
+
+  final String title;
+  final String titleBnt;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              title,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+          const Spacer(),
+          TextButton(
+              onPressed: () {},
+              child: Text(
+                titleBnt,
+                textAlign: TextAlign.right,
+                style: const TextStyle(
+                  color: Color(0xFF0063F7),
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                ),
+              ))
+        ],
+      ),
     );
   }
 }

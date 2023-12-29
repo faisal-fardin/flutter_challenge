@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               const ScreenHeaderSection(headerImage: 'images/Theme.png',),
               const SuggestedSection(title: 'Suggested for you',),
+              const TitleBar(title: 'All Transactions', titleBnt: 'See All'),
               const TransactionsSection(
                 transactionDate: 'October 8th, 2022',
                 brandName: 'LONGOS',
@@ -32,8 +33,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 price: -80.85,
                 camera: 'images/ca.png',
                 color: 0xFFFF8800,
-                title: 'All Transactions',
-                titleBnt: 'See All',
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
