@@ -62,13 +62,13 @@ class TransactionsSection extends StatelessWidget {
                   brandName,
                   style: const TextStyle(
                     color: Colors.black,
-                    fontSize: 11,
+                    fontSize: 10,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
                 leading: Container(
-                  width: 30.97,
-                  height: 30.97,
+                  width: 30,
+                  height: 30,
                   decoration: ShapeDecoration(
                     color: Colors.grey,
                     shape: RoundedRectangleBorder(
@@ -101,10 +101,10 @@ class TransactionsSection extends StatelessWidget {
                     ),
                     const SizedBox(width: 6,),
                     Container(
-                      width: 58,
+                      width: 62,
                       height: 16,
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 6, vertical: 2),
+                          horizontal: 4, vertical: 2),
                       decoration: ShapeDecoration(
                         color:  Color(color),
                         shape: RoundedRectangleBorder(
@@ -120,7 +120,7 @@ class TransactionsSection extends StatelessWidget {
                               shape: OvalBorder(),
                             ),
                           ),
-                          const SizedBox(width: 6),
+                          const SizedBox(width: 4),
                            Text(status,
                             style: const TextStyle(
                               color: Colors.white,
@@ -133,7 +133,7 @@ class TransactionsSection extends StatelessWidget {
                     ),
                     const Spacer(),
                      SizedBox(
-                      height: 32,
+                      height: 30,
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: Row(
