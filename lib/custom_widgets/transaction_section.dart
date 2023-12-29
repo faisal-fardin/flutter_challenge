@@ -125,81 +125,77 @@ class TransactionsSection extends StatelessWidget {
                     fit: BoxFit.fill,
                   ),
                 ),
-                subtitle: Expanded(
-                  child: Row(
-                    children: [
-                       Text(
-                        transactionTime,
-                        style: const TextStyle(
-                          color: Color(0xFF8F90A6),
-                          fontSize: 10,
-                          fontWeight: FontWeight.w400,
-                        ),
+                subtitle: Row(
+                  children: [
+                     Text(
+                      transactionTime,
+                      style: const TextStyle(
+                        color: Color(0xFF8F90A6),
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
                       ),
-                      const SizedBox(width: 6,),
-                      Container(
-                        width: 58,
-                        height: 16,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 6, vertical: 2),
-                        decoration: ShapeDecoration(
-                          color:  Color(color),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                        ),
-                        child: Expanded(
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 4,
-                                height: 4,
-                                decoration: const ShapeDecoration(
-                                  color: Colors.white,
-                                  shape: OvalBorder(),
-                                ),
-                              ),
-                              const SizedBox(width: 6),
-                               Text(status,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 9,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              )
-                            ],
+                    ),
+                    const SizedBox(width: 6,),
+                    Container(
+                      width: 58,
+                      height: 16,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 6, vertical: 2),
+                      decoration: ShapeDecoration(
+                        color:  Color(color),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 4,
+                            height: 4,
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: OvalBorder(),
+                            ),
                           ),
+                          const SizedBox(width: 6),
+                           Text(status,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 9,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    const Spacer(),
+                     SizedBox(
+                      height: 32,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20.0),
+                        child: Row(
+                          children: [
+                            Text( NumberFormat.simpleCurrency(locale: 'en-US').format(price),
+                              textAlign: TextAlign.right,
+                              style: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            Image(
+                              image: AssetImage(camera),
+                              width: 32,
+                              height: 32,
+                              fit: BoxFit.fill,
+                            ),
+                          ],
                         ),
                       ),
-                      const Spacer(),
-                       SizedBox(
-                        height: 32,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 20.0),
-                          child: Row(
-                            children: [
-                              Text( NumberFormat.simpleCurrency(locale: 'en-US').format(price),
-                                textAlign: TextAlign.right,
-                                style: const TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 6,
-                              ),
-                              Image(
-                                image: AssetImage(camera),
-                                width: 32,
-                                height: 32,
-                                fit: BoxFit.fill,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               )
             ],

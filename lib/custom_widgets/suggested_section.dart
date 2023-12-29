@@ -105,7 +105,7 @@ class SuggestedSection extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    width: 128.57,
+                    width: 125.57,
                     height: 93.52,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
@@ -114,37 +114,36 @@ class SuggestedSection extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Expanded(
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 20,
+                  const Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
+                      SizedBox(
+                        width: 154,
+                        child: Text(
+                          'Bless Calendar will save you time and money!',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
                           ),
-                          SizedBox(
-                            width: 154,
-                            child: Text(
-                              'Bless Calendar will save you time and money!',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
+                        ),
+                      ),
+                      SizedBox(height: 8),
+                      SizedBox(
+                        width: 153,
+                        child: Text(
+                          'Easily budget like a pro with Bless! Automate your bill payments and save time by skipping those extra clicks.',
+                          style: TextStyle(
+                            color: Color(0xFF8F90A6),
+                            fontSize: 8,
+                            fontWeight: FontWeight.w600,
                           ),
-                          SizedBox(height: 8),
-                          SizedBox(
-                            width: 153,
-                            child: Text(
-                              'Easily budget like a pro with Bless! Automate your bill payments and save time by skipping those extra clicks.',
-                              style: TextStyle(
-                                color: Color(0xFF8F90A6),
-                                fontSize: 8,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                        ],
-                      )),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -171,7 +170,7 @@ class SuggestedSection extends StatelessWidget {
               child: Container(
                 width: 112,
                 height: 100.63,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('images/interior.png'),
                     fit: BoxFit.cover,
